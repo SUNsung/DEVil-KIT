@@ -1,0 +1,646 @@
+EESchema Schematic File Version 4
+LIBS:PROG_for_DEVil-KIT-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date "2019-04-23"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J2
+U 1 1 5CBF5248
+P 1450 5900
+F 0 "J2" H 1500 6217 50  0000 C CNN
+F 1 "PROG" H 1500 6126 50  0000 C CNN
+F 2 "Connector_IDC:IDC-Header_2x03_P2.54mm_Vertical" H 1450 5900 50  0001 C CNN
+F 3 "~" H 1450 5900 50  0001 C CNN
+	1    1450 5900
+	-1   0    0    -1  
+$EndComp
+Text GLabel 1100 5800 0    50   Input ~ 0
+5V_PROG
+Text GLabel 1700 5800 2    50   Input ~ 0
+RST_PROG
+Text GLabel 1700 6000 2    50   Input ~ 0
+BOOT_PROG
+Text GLabel 1100 5900 0    50   Input ~ 0
+RX_PROG
+Text GLabel 1700 5900 2    50   Input ~ 0
+TX_PROG
+$Comp
+L power:GND #PWR0101
+U 1 1 5CBF536D
+P 1100 6000
+F 0 "#PWR0101" H 1100 5750 50  0001 C CNN
+F 1 "GND" H 1105 5827 50  0000 C CNN
+F 2 "" H 1100 6000 50  0001 C CNN
+F 3 "" H 1100 6000 50  0001 C CNN
+	1    1100 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1100 5800 1150 5800
+Wire Wire Line
+	1100 5900 1150 5900
+Wire Wire Line
+	1100 6000 1150 6000
+Wire Wire Line
+	1650 5800 1700 5800
+Wire Wire Line
+	1650 5900 1700 5900
+Wire Wire Line
+	1650 6000 1700 6000
+Wire Notes Line
+	650  5500 2250 5500
+Wire Notes Line
+	2250 5500 2250 6250
+Wire Notes Line
+	2250 6250 650  6250
+Wire Notes Line
+	650  5500 650  6250
+$Comp
+L power:GND #PWR0102
+U 1 1 5CBF565E
+P 900 5100
+F 0 "#PWR0102" H 900 4850 50  0001 C CNN
+F 1 "GND" H 905 4927 50  0000 C CNN
+F 2 "" H 900 5100 50  0001 C CNN
+F 3 "" H 900 5100 50  0001 C CNN
+	1    900  5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:USB_B_Micro J1
+U 1 1 5CBF5767
+P 950 4650
+F 0 "J1" H 1005 5117 50  0000 C CNN
+F 1 "POWER" H 1005 5026 50  0000 C CNN
+F 2 "Connector_USB:USB_Mini-B_Lumberg_2486_01_Horizontal" H 1100 4600 50  0001 C CNN
+F 3 "~" H 1100 4600 50  0001 C CNN
+	1    950  4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	850  5050 900  5050
+Wire Wire Line
+	900  5100 900  5050
+Connection ~ 900  5050
+Wire Wire Line
+	900  5050 950  5050
+$Comp
+L Transistor_FET:BSS214NW Q3
+U 1 1 5CBF6938
+P 4850 7150
+F 0 "Q3" H 5056 7104 50  0000 L CNN
+F 1 "BSS138LT1G" H 5056 7195 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 5050 7075 50  0001 L CIN
+F 3 "https://www.infineon.com/dgdl/Infineon-BSS214NW-DS-v02_02-en.pdf?fileId=db3a30431b3e89eb011b695aebc01bde" H 4850 7150 50  0001 L CNN
+	1    4850 7150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C_Small C3
+U 1 1 5CBF6B20
+P 4050 7150
+F 0 "C3" H 4250 7100 50  0000 R CNN
+F 1 "1pF" H 4250 7200 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4050 7150 50  0001 C CNN
+F 3 "~" H 4050 7150 50  0001 C CNN
+	1    4050 7150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4750 6950 4600 6950
+Wire Wire Line
+	4050 6950 4050 7050
+$Comp
+L power:GND #PWR0103
+U 1 1 5CBF6F51
+P 3700 7450
+F 0 "#PWR0103" H 3700 7200 50  0001 C CNN
+F 1 "GND" H 3705 7277 50  0000 C CNN
+F 2 "" H 3700 7450 50  0001 C CNN
+F 3 "" H 3700 7450 50  0001 C CNN
+	1    3700 7450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5CBF6F9F
+P 4600 6800
+F 0 "R5" V 4600 6800 50  0000 C CNN
+F 1 "4.7k" V 4484 6800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 4530 6800 50  0001 C CNN
+F 3 "~" H 4600 6800 50  0001 C CNN
+	1    4600 6800
+	-1   0    0    1   
+$EndComp
+Connection ~ 4600 6950
+Wire Wire Line
+	4600 6950 4050 6950
+$Comp
+L Device:R R6
+U 1 1 5CBF7224
+P 5150 7300
+F 0 "R6" V 5150 7300 50  0000 C CNN
+F 1 "10k" V 5034 7300 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 5080 7300 50  0001 C CNN
+F 3 "~" H 5150 7300 50  0001 C CNN
+	1    5150 7300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 7150 5150 7150
+Wire Wire Line
+	5150 7450 4750 7450
+Wire Wire Line
+	4050 7250 4050 7450
+Wire Wire Line
+	4750 7350 4750 7450
+Connection ~ 4750 7450
+Text GLabel 1950 4500 3    50   Input ~ 0
+5V_PROG
+$Comp
+L Transistor_FET:BSS214NW Q4
+U 1 1 5CBF810C
+P 6250 7150
+F 0 "Q4" H 6456 7104 50  0000 L CNN
+F 1 "BSS138LT1G" H 6456 7195 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 6450 7075 50  0001 L CIN
+F 3 "https://www.infineon.com/dgdl/Infineon-BSS214NW-DS-v02_02-en.pdf?fileId=db3a30431b3e89eb011b695aebc01bde" H 6250 7150 50  0001 L CNN
+	1    6250 7150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C_Small C4
+U 1 1 5CBF8112
+P 5450 7150
+F 0 "C4" H 5650 7100 50  0000 R CNN
+F 1 "1pF" H 5650 7200 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5450 7150 50  0001 C CNN
+F 3 "~" H 5450 7150 50  0001 C CNN
+	1    5450 7150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6150 6950 6000 6950
+Wire Wire Line
+	5450 6950 5450 7050
+$Comp
+L Device:R R7
+U 1 1 5CBF8120
+P 6000 6800
+F 0 "R7" V 6000 6800 50  0000 C CNN
+F 1 "4.7k" V 5884 6800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 5930 6800 50  0001 C CNN
+F 3 "~" H 6000 6800 50  0001 C CNN
+	1    6000 6800
+	-1   0    0    1   
+$EndComp
+Connection ~ 6000 6950
+Wire Wire Line
+	6000 6950 5450 6950
+$Comp
+L Device:R R8
+U 1 1 5CBF8128
+P 6550 7300
+F 0 "R8" V 6550 7300 50  0000 C CNN
+F 1 "10k" V 6434 7300 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 6480 7300 50  0001 C CNN
+F 3 "~" H 6550 7300 50  0001 C CNN
+	1    6550 7300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 7150 6550 7150
+Wire Wire Line
+	6550 7450 6150 7450
+Wire Wire Line
+	5450 7250 5450 7450
+Wire Wire Line
+	6150 7350 6150 7450
+Connection ~ 6150 7450
+Text GLabel 6550 7050 1    50   Input ~ 0
+RX_PROG
+Text GLabel 5450 6900 1    50   Input ~ 0
+RX
+Wire Wire Line
+	6550 7150 6550 7050
+Connection ~ 6550 7150
+Wire Wire Line
+	5450 6950 5450 6900
+Connection ~ 5450 6950
+Text GLabel 5150 6900 1    50   Input ~ 0
+TX
+Connection ~ 5150 7150
+Text GLabel 4100 6850 2    50   Input ~ 0
+TX_PROG
+Wire Wire Line
+	4050 6950 4050 6850
+Wire Wire Line
+	4050 6850 4100 6850
+Connection ~ 4050 6950
+$Comp
+L Transistor_FET:BSS214NW Q2
+U 1 1 5CBF9F30
+P 3150 7150
+F 0 "Q2" H 3356 7104 50  0000 L CNN
+F 1 "BSS138LT1G" H 3356 7195 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 3350 7075 50  0001 L CIN
+F 3 "https://www.infineon.com/dgdl/Infineon-BSS214NW-DS-v02_02-en.pdf?fileId=db3a30431b3e89eb011b695aebc01bde" H 3150 7150 50  0001 L CNN
+	1    3150 7150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 5CBF9F37
+P 2350 7150
+F 0 "C2" H 2550 7100 50  0000 R CNN
+F 1 "1pF" H 2550 7200 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2350 7150 50  0001 C CNN
+F 3 "~" H 2350 7150 50  0001 C CNN
+	1    2350 7150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3050 6950 2900 6950
+Wire Wire Line
+	2350 6950 2350 7050
+$Comp
+L Device:R R3
+U 1 1 5CBF9F46
+P 2900 6800
+F 0 "R3" V 2900 6800 50  0000 C CNN
+F 1 "4.7k" V 2784 6800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 2830 6800 50  0001 C CNN
+F 3 "~" H 2900 6800 50  0001 C CNN
+	1    2900 6800
+	-1   0    0    1   
+$EndComp
+Connection ~ 2900 6950
+Wire Wire Line
+	2900 6950 2350 6950
+$Comp
+L Device:R R4
+U 1 1 5CBF9F4F
+P 3450 7300
+F 0 "R4" V 3450 7300 50  0000 C CNN
+F 1 "10k" V 3334 7300 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 3380 7300 50  0001 C CNN
+F 3 "~" H 3450 7300 50  0001 C CNN
+	1    3450 7300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 7150 3450 7150
+Wire Wire Line
+	3450 7450 3050 7450
+Wire Wire Line
+	2350 7250 2350 7450
+Wire Wire Line
+	3050 7350 3050 7450
+Connection ~ 3050 7450
+Wire Wire Line
+	4050 7450 4750 7450
+Wire Wire Line
+	5450 7450 6150 7450
+Connection ~ 5150 7450
+Connection ~ 5450 7450
+Wire Notes Line
+	6650 6500 6650 7700
+Wire Wire Line
+	4600 6650 6000 6650
+Connection ~ 4600 6650
+Wire Wire Line
+	5150 6900 5150 7150
+$Comp
+L Transistor_FET:BSS214NW Q1
+U 1 1 5CBFFE8A
+P 1750 7150
+F 0 "Q1" H 1956 7104 50  0000 L CNN
+F 1 "BSS138LT1G" H 1956 7195 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 1950 7075 50  0001 L CIN
+F 3 "https://www.infineon.com/dgdl/Infineon-BSS214NW-DS-v02_02-en.pdf?fileId=db3a30431b3e89eb011b695aebc01bde" H 1750 7150 50  0001 L CNN
+	1    1750 7150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C_Small C1
+U 1 1 5CBFFE91
+P 950 7150
+F 0 "C1" H 1150 7100 50  0000 R CNN
+F 1 "1pF" H 1150 7200 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 950 7150 50  0001 C CNN
+F 3 "~" H 950 7150 50  0001 C CNN
+	1    950  7150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1650 6950 1500 6950
+Wire Wire Line
+	950  6950 950  7050
+$Comp
+L Device:R R1
+U 1 1 5CBFFEA0
+P 1500 6800
+F 0 "R1" V 1500 6800 50  0000 C CNN
+F 1 "4.7k" V 1384 6800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 1430 6800 50  0001 C CNN
+F 3 "~" H 1500 6800 50  0001 C CNN
+	1    1500 6800
+	-1   0    0    1   
+$EndComp
+Connection ~ 1500 6950
+Wire Wire Line
+	1500 6950 950  6950
+$Comp
+L Device:R R2
+U 1 1 5CBFFEA9
+P 2050 7300
+F 0 "R2" V 2050 7300 50  0000 C CNN
+F 1 "10k" V 1934 7300 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 1980 7300 50  0001 C CNN
+F 3 "~" H 2050 7300 50  0001 C CNN
+	1    2050 7300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 7150 2050 7150
+Wire Wire Line
+	2050 7450 1650 7450
+Wire Wire Line
+	950  7250 950  7450
+Wire Wire Line
+	1650 7350 1650 7450
+Connection ~ 1650 7450
+Wire Wire Line
+	950  7450 1650 7450
+Wire Wire Line
+	2350 7450 3050 7450
+Connection ~ 2350 7450
+Connection ~ 2050 7450
+Wire Wire Line
+	1500 6650 2900 6650
+Text GLabel 950  6850 2    50   Input ~ 0
+RST_PROG
+Text GLabel 2300 6850 0    50   Input ~ 0
+BOOT_PROG
+Wire Wire Line
+	950  6950 950  6850
+Connection ~ 950  6950
+Wire Wire Line
+	2300 6850 2350 6850
+Wire Wire Line
+	2350 6850 2350 6950
+Connection ~ 2350 6950
+Text GLabel 2050 7050 0    50   Input ~ 0
+RST
+Text GLabel 3450 7050 0    50   Input ~ 0
+BOOT
+Wire Wire Line
+	3450 7150 3450 7050
+Connection ~ 3450 7150
+Wire Wire Line
+	2050 7050 2050 7150
+Connection ~ 2050 7150
+$Comp
+L Regulator_Linear:AMS1117-3.3 U1
+U 1 1 5CC0DC16
+P 9350 6000
+F 0 "U1" H 9350 6242 50  0000 C CNN
+F 1 "AMS1117-3.3" H 9350 6151 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 9350 6200 50  0001 C CNN
+F 3 "http://www.advanced-monolithic.com/pdf/ds1117.pdf" H 9450 5750 50  0001 C CNN
+	1    9350 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0104
+U 1 1 5CC0DFA7
+P 10700 6000
+F 0 "#PWR0104" H 10700 5850 50  0001 C CNN
+F 1 "+3.3V" V 10715 6128 50  0000 L CNN
+F 2 "" H 10700 6000 50  0001 C CNN
+F 3 "" H 10700 6000 50  0001 C CNN
+	1    10700 6000
+	0    1    1    0   
+$EndComp
+Connection ~ 2900 6650
+Wire Wire Line
+	3450 7450 3700 7450
+Connection ~ 3450 7450
+Connection ~ 4050 7450
+Wire Wire Line
+	2050 7450 2350 7450
+Connection ~ 3700 7450
+Wire Wire Line
+	3700 7450 4050 7450
+Wire Wire Line
+	5150 7450 5450 7450
+Wire Notes Line
+	700  7700 6650 7700
+Wire Notes Line
+	700  6500 700  7700
+Wire Notes Line
+	700  6500 6650 6500
+$Comp
+L Device:CP C5
+U 1 1 5CC1B893
+P 8700 6150
+F 0 "C5" H 8818 6196 50  0000 L CNN
+F 1 "10uF " H 8818 6105 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B_Pad1.50x2.35mm_HandSolder" H 8738 6000 50  0001 C CNN
+F 3 "10uF 16V size-B 10% tantalum" H 8700 6150 50  0001 C CNN
+	1    8700 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C6
+U 1 1 5CC1B953
+P 9800 6150
+F 0 "C6" H 9918 6196 50  0000 L CNN
+F 1 "10uF " H 9918 6105 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B_Pad1.50x2.35mm_HandSolder" H 9838 6000 50  0001 C CNN
+F 3 "10uF 16V size-B 10% tantalum" H 9800 6150 50  0001 C CNN
+	1    9800 6150
+	1    0    0    -1  
+$EndComp
+Connection ~ 9800 6000
+Wire Wire Line
+	9800 6000 9650 6000
+Wire Wire Line
+	8700 6000 9050 6000
+Connection ~ 9350 6300
+Wire Wire Line
+	9350 6300 9800 6300
+Wire Wire Line
+	8700 6300 9350 6300
+$Comp
+L lb-my:USB-UART_CP2104 AD1
+U 1 1 5CBF82C9
+P 5600 2850
+F 0 "AD1" H 5850 3915 50  0000 C CNN
+F 1 "USB-UART_CP2104" H 5850 3824 50  0000 C CNN
+F 2 "pcb:USB-UART_CP2104" H 5250 2400 50  0001 C CNN
+F 3 "" H 5250 2400 50  0001 C CNN
+	1    5600 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Schottky D4
+U 1 1 5CC0ECDD
+P 10200 6000
+F 0 "D4" H 10100 6200 50  0000 C CNN
+F 1 "MBR0520LT1G" H 9950 6100 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123F" H 10200 6000 50  0001 C CNN
+F 3 "0.5А" H 10200 6000 50  0001 C CNN
+	1    10200 6000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2900 6650 3700 6650
+Wire Wire Line
+	3700 6700 3700 6650
+Connection ~ 3700 6650
+Wire Wire Line
+	3700 6650 4600 6650
+Wire Wire Line
+	10350 6000 10700 6000
+Wire Wire Line
+	9800 6000 10050 6000
+Text GLabel 8250 6000 0    50   Input ~ 0
+5V_PROG
+Wire Wire Line
+	8600 6000 8700 6000
+Connection ~ 8700 6000
+$Comp
+L Device:D_Schottky D3
+U 1 1 5CC03DF3
+P 8450 6000
+F 0 "D3" H 8450 6100 50  0000 C CNN
+F 1 "MBR0520LT1G" H 8350 5900 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123F" H 8450 6000 50  0001 C CNN
+F 3 "0.5А" H 8450 6000 50  0001 C CNN
+	1    8450 6000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8250 6000 8300 6000
+Wire Notes Line
+	7800 6400 7800 5700
+Wire Notes Line
+	7800 5700 11100 5700
+Wire Notes Line
+	11100 5700 11100 6400
+Wire Notes Line
+	7800 6400 11100 6400
+$Comp
+L power:+3.3V #PWR0105
+U 1 1 5CC089A7
+P 3700 6700
+F 0 "#PWR0105" H 3700 6550 50  0001 C CNN
+F 1 "+3.3V" V 3715 6828 50  0000 L CNN
+F 2 "" H 3700 6700 50  0001 C CNN
+F 3 "" H 3700 6700 50  0001 C CNN
+	1    3700 6700
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:D_Schottky D2
+U 1 1 5CC0A4D7
+P 5950 3650
+F 0 "D2" H 5950 3550 50  0000 C CNN
+F 1 "MBR0520LT1G" H 5900 3750 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123F" H 5950 3650 50  0001 C CNN
+F 3 "0.5А" H 5950 3650 50  0001 C CNN
+	1    5950 3650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5950 3500 5950 3450
+Wire Wire Line
+	6150 3500 6150 3450
+Text GLabel 6000 3800 2    50   Input ~ 0
+5V_PROG
+Wire Wire Line
+	5950 3800 6000 3800
+$Comp
+L power:GND #PWR0106
+U 1 1 5CC0F4E1
+P 5350 3500
+F 0 "#PWR0106" H 5350 3250 50  0001 C CNN
+F 1 "GND" H 5355 3327 50  0000 C CNN
+F 2 "" H 5350 3500 50  0001 C CNN
+F 3 "" H 5350 3500 50  0001 C CNN
+	1    5350 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 3500 5350 3450
+Wire Notes Line
+	650  4100 2100 4100
+Wire Notes Line
+	2100 4100 2100 5350
+Wire Notes Line
+	2100 5350 650  5350
+Wire Notes Line
+	650  4100 650  5350
+Text GLabel 6650 2700 2    50   Input ~ 0
+RST
+Text GLabel 6350 3550 2    50   Input ~ 0
+BOOT
+Text GLabel 5750 3550 3    50   Input ~ 0
+TX
+Text GLabel 5550 3550 3    50   Input ~ 0
+RX
+Wire Wire Line
+	5550 3550 5550 3450
+Wire Wire Line
+	5750 3550 5750 3450
+Wire Wire Line
+	6600 2700 6650 2700
+Wire Wire Line
+	6350 3550 6350 3450
+$Comp
+L Device:D_Schottky D5
+U 1 1 5CC20766
+P 1500 4750
+F 0 "D5" H 1500 4650 50  0000 C CNN
+F 1 "MBR0520LT1G" H 1450 4850 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123F" H 1500 4750 50  0001 C CNN
+F 3 "0.5А" H 1500 4750 50  0001 C CNN
+	1    1500 4750
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:D_Schottky D1
+U 1 1 5CC207F4
+P 1500 4450
+F 0 "D1" H 1500 4350 50  0000 C CNN
+F 1 "MBR0520LT1G" H 1450 4550 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123F" H 1500 4450 50  0001 C CNN
+F 3 "0.5А" H 1500 4450 50  0001 C CNN
+	1    1500 4450
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 4750 1350 4450
+Wire Wire Line
+	1650 4750 1650 4450
+Wire Wire Line
+	1250 4450 1350 4450
+Connection ~ 1350 4450
+Wire Wire Line
+	1650 4450 1950 4450
+Wire Wire Line
+	1950 4450 1950 4500
+Connection ~ 1650 4450
+$EndSCHEMATC
